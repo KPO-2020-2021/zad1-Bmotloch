@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>
+#include <math.h> /* przy kompilacji w C nalezy dodac -lm */
 
 
 struct TrojmianKw {
