@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
 
-
-
 /*
  *  Liczy ilosc wystapien znaku "spacja"
  *
@@ -22,7 +20,6 @@ int PoliczSpacje(char* Tekst)
       if (*Tekst == ' ') ++Ilosc;
   return Ilosc;
 }
-
 
 /*
  * Wyznacza dlugosc najdluzszego slowa w tekscie.
@@ -53,8 +50,6 @@ int RozmiarNajdluzszegoSlowa(char* Tekst)
   return DlugoscMaks;
 }
 
-
-
 /*
  * Zamienia wszystkie spacje znajdujace sie w tekscie na znak podkreslenia.
  *
@@ -71,8 +66,6 @@ void ZamienNaPodkreslenie(char* Tekst)
   for (; *Tekst; ++Tekst)
       if (*Tekst == ' ') *Tekst = '_';
 }
-
-
 
 /*
  * Oblicza ilosc wystapien malych liter.
@@ -97,7 +90,6 @@ int IloscMalychLiter(char *Tekst)
   return Ilosc;
 }
 
-
 /*
  * Oblicza ilosc wystapien wielkich liter.
  *
@@ -121,11 +113,9 @@ int IloscWielkichLiter(char *Tekst)
   return Ilosc;
 }
 
-
-
 int main()
 {
-  char *Napis = "Jak dobrze jest wstac skoro swit. Jutrzenki blask ...";
+  char Napis[] = "Jak dobrze jest wstac skoro swit. Jutrzenki blask ...";
   int IloscSpacji;
   int DlugoscSlowaXXX;
   int IloscMaLiter = 0;
@@ -133,8 +123,6 @@ int main()
 
   printf("\n------------------------------\n");
   printf(" Statystyka dla tekstu: '%s'\n\n",Napis);
-
-
 
   IloscSpacji = PoliczSpacje(Napis);
   DlugoscSlowaXXX = RozmiarNajdluzszegoSlowa(Napis);
